@@ -12,6 +12,11 @@ code {
     monospace;
 }
 
+
+/*
+App.js
+*/
+
 /*
 Icons
 */
@@ -20,4 +25,304 @@ Icons
   margin: 10px;
   width: 5%;
   height: auto;
+}
+
+/*Header*/
+/* Header container styling */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* Left side of header with name */
+.header-left h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333333;
+  margin: 0;
+}
+
+/* Right side of header with navigation and icons */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/* Navigation text styling */
+.header-right p {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #555555;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.header-right p:hover {
+  color: #0066cc;
+}
+
+/* Social icons styling */
+.header-right svg {
+  font-size: 1.25rem;
+  color: #555555;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.header-right svg:hover {
+  color: #0066cc;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .header {
+    padding: 1rem;
+  }
+  
+  .header-right {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.75rem;
+  }
+  
+  .header-right {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+/*Home Page*/
+/* Main container styles */
+.home-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Section styling with consistent spacing */
+.home-page > div {
+  margin-bottom: 4rem;
+}
+
+/* Headings */
+.home-page h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #1a1a1a;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.home-page h2:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 60px;
+  background-color: #0066cc;
+}
+
+.home-page h3 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+  color: #333;
+}
+
+/* Introduction section */
+.home-intro {
+  text-align: center;
+  padding: 2rem 0 3rem;
+}
+
+.home-intro h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.home-intro h2:after {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.home-intro p {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+/* About section */
+.home-about p {
+  margin-bottom: 1.2rem;
+}
+
+/* Project cards */
+.project-card {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+.project-date {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 0.75rem;
+  font-style: italic;
+}
+
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.project-tech svg {
+  width: 28px;
+  height: 28px;
+  color: #555;
+}
+
+/* Skills section */
+.home-skills {
+  background-color: #f5f7fa;
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+.skills-section {
+  margin-bottom: 2rem;
+}
+
+.skills-section h3 {
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  color: #444;
+}
+
+.skills-languages,
+.skills-frameworks,
+.skills-technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.skills-languages svg,
+.skills-frameworks svg,
+.skills-technologies svg {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.2s ease;
+}
+
+.skills-languages svg:hover,
+.skills-frameworks svg:hover,
+.skills-technologies svg:hover {
+  transform: scale(1.15);
+}
+
+/* Education section */
+.education-card {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 1.5rem;
+  border-left: 4px solid #0066cc;
+}
+
+.degree {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.education-info {
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+/* Contact section */
+.home-contact {
+  text-align: center;
+  background-color: #f5f7fa;
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+.home-contact p {
+  max-width: 600px;
+  margin: 0 auto 1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .home-page {
+    padding: 1.5rem 1rem;
+  }
+  
+  .home-intro h2 {
+    font-size: 2rem;
+  }
+  
+  .skills-languages,
+  .skills-frameworks,
+  .skills-technologies {
+    gap: 1rem;
+  }
+  
+  .skills-languages svg,
+  .skills-frameworks svg,
+  .skills-technologies svg {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-page h2 {
+    font-size: 1.75rem;
+  }
+  
+  .home-page h3 {
+    font-size: 1.25rem;
+  }
+  
+  .project-card,
+  .education-card {
+    padding: 1.25rem;
+  }
+  
+  .home-skills,
+  .home-contact {
+    padding: 1.5rem;
+  }
 }
