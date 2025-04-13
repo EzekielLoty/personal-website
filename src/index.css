@@ -108,6 +108,7 @@ Icons
 
 /*Home Page*/
 /* Main container styles */
+
 .home-page {
   max-width: 1200px;
   margin: 0 auto;
@@ -150,26 +151,179 @@ Icons
 }
 
 /* Introduction section */
+/* Enhanced intro section with animations */
 .home-intro {
   text-align: center;
-  padding: 2rem 0 3rem;
+  padding: 4rem 0;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e4edf9 100%);
+  border-radius: 12px;
+  margin-bottom: 3rem;
 }
 
+/* Title styling with gradient text */
 .home-intro h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+  font-size: 2.75rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(90deg, #0066cc, #00a1ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  position: relative;
+  opacity: 0;
+  animation: fadeInUp 0.8s ease forwards;
 }
 
+/* Stylish underline effect */
 .home-intro h2:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 3px;
+  bottom: -10px;
   left: 50%;
+  background: linear-gradient(90deg, #0066cc, #00a1ff);
   transform: translateX(-50%);
+  animation: expandWidth 1.2s ease forwards 0.8s;
 }
 
+/* Welcome text styling */
 .home-intro p {
+  font-size: 1.4rem;
   max-width: 800px;
   margin: 0 auto;
-  font-size: 1.1rem;
-  line-height: 1.8;
+  color: #333;
+  position: relative;
+  opacity: 0;
+  animation: fadeInUp 0.8s ease forwards 0.4s;
+}
+
+/* Decorative elements */
+.home-intro:before,
+.home-intro:after {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.home-intro:before {
+  background: radial-gradient(circle, rgba(0,102,204,0.1) 0%, rgba(0,102,204,0) 70%);
+  top: -100px;
+  left: -100px;
+  animation: floatAnimation 15s infinite alternate ease-in-out;
+}
+
+.home-intro:after {
+  background: radial-gradient(circle, rgba(0,161,255,0.1) 0%, rgba(0,161,255,0) 70%);
+  bottom: -100px;
+  right: -100px;
+  animation: floatAnimation 18s infinite alternate-reverse ease-in-out;
+}
+
+/* Adding a container for potential typing effect text */
+.home-intro .typing-container {
+  min-height: 30px;
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  color: #0066cc;
+  font-weight: 500;
+}
+
+/* Animation keyframes */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes expandWidth {
+  from {
+    width: 0;
+  }
+  to {
+    width: 180px;
+  }
+}
+
+@keyframes floatAnimation {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(30px, 20px) scale(1.1);
+  }
+  100% {
+    transform: translate(10px, 30px) scale(1);
+  }
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .home-intro {
+    padding: 3rem 1rem;
+  }
+  
+  .home-intro h2 {
+    font-size: 2rem;
+  }
+  
+  .home-intro p {
+    font-size: 1.2rem;
+  }
+  
+  @keyframes expandWidth {
+    to {
+      width: 140px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .home-intro h2 {
+    font-size: 1.75rem;
+  }
+  
+  .home-intro p {
+    font-size: 1.1rem;
+  }
+  
+  @keyframes expandWidth {
+    to {
+      width: 120px;
+    }
+  }
+}
+
+/* Cursor animation */
+.cursor {
+  display: inline-block;
+  width: 0px;
+  background-color: #0066cc;
+  animation: blink 1s infinite;
+  margin-left: 2px;
+}
+
+.cursor p{
+  color: #0066cc;
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
 }
 
 /* About section */
@@ -253,6 +407,9 @@ Icons
 }
 
 /* Education section */
+.home-education{
+  display: none;
+}
 .education-card {
   background-color: #f9f9f9;
   border-radius: 8px;

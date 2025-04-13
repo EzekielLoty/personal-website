@@ -8,10 +8,14 @@ function Header() {
                 <h3>Ezekiel Loty</h3>
             </div>
             <div className="header-right">
-                <p>About</p>
-                <p>Contact</p>
-                <FaGithub />
-                <FaLinkedin />
+                {/* <p>About</p>
+                <p>Contact</p> */}
+                <a href="https://github.com/EzekielLoty" target="_blank" rel="noopener noreferrer">
+                    <FaGithub />
+                </a>
+                <a href="https://www.linkedin.com/in/ezekiel-loty/" target="_blank" rel="noopener noreferrer">
+                    <FaLinkedin />
+                </a>
             </div>
         </div>
     );

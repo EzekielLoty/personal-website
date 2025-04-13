@@ -4,28 +4,42 @@ import {
     JupyterWordmark
 } from "./assets/Icons";
 
+import { Link } from "react-router";
+import { useState, useEffect } from 'react';
+
 function Home() {
+    const [text, setText] = useState('');
+    const [index, setIndex] = useState(0);
+    const fullText = "Hello and Welcome to My Website!";
+    
+    useEffect(() => {
+        if (index < fullText.length) {
+            const timeout = setTimeout(() => {
+                setText(prev => prev + fullText[index]);
+                setIndex(index + 1);
+            }, 50);
+            
+            return () => clearTimeout(timeout);
+        }
+    }, [index]);
+
     return (
         <div className="home-page">
             <div className="home-intro">
-                <h2>Ezekiel Loty: Software Engineer | Data Scientist</h2>
-                <p>
-                    Computer Science Co-op student at Dalhousie University with a strong academic record (3.97/4.30 GPA) 
-                    seeking a Summer 2025 internship. Passionate about creating impactful software and leveraging data science 
-                    for real-world solutions.
-                </p>
+                <h2>Ezekiel Loty: Data Scientist | Software Engineer</h2>
+                <div className="typing-container">
+                    {text}<span className="cursor"><p>|</p></span>
+                </div>
             </div>
             
             <div className="home-about">
                 <h2>About Me</h2>
                 <p>
-                    I'm a second-year Computer Science student at Dalhousie University with a passion for problem-solving 
-                    through code. My technical interests span both software engineering and data science, with experience 
-                    in full-stack development, database management, and data analysis.
+                Hey! I'm Ezekiel Loty, a second-year Computer Science student at Dalhousie University.
                 </p>
                 <p>
-                    As a Sexton Scholar maintaining a 3.97/4.30 GPA, I balance academic excellence with hands-on project work. 
-                    Currently seeking a co-op/internship position for Summer 2025 to apply my skills in a professional environment.
+                I'm passionate about Software Engineering and Data Science, and I've recently started diving into Machine Learning as well.
+                I love building projects inspired by my hobbies and try to work on them whenever I get the chance. This website is a place to showcase those projects and share any updates along my career journey. 
                 </p>
             </div>
             
@@ -33,6 +47,7 @@ function Home() {
                 <h2>Featured Projects</h2>
                 <div className="project-card">
                     <h3>Tree Software</h3>
+                    <p>Junior Developer</p>
                     <p className="project-date">January 2025 - Present</p>
                     <p>
                         Building a web platform for a tree and lumber company client that enables customer interaction, 
@@ -85,6 +100,7 @@ function Home() {
                         <Html5 />
                         <Css3 />
                         <C />
+                        <Azuresqldatabase />
                     </div>
                 </div>
                 
@@ -104,7 +120,6 @@ function Home() {
                         <Intellij />
                         <FileTypeVscode />
                         <MysqlWordmark />
-                        <Azuresqldatabase />
                         <JupyterWordmark />
                         <FileTypeFirebase />
                         <Aws />
@@ -120,15 +135,18 @@ function Home() {
                 <div className="education-card">
                     <h3>Dalhousie University</h3>
                     <p className="degree">Bachelor of Computer Science Co-op Program</p>
-                    <p className="education-info">Expected Graduation: May 2027 | GPA: 3.97/4.30 | Sexton Scholar</p>
-                    <p>Relevant Coursework: Data Structures & Algorithms, Software Project, Database Management Systems</p>
+                    <p className="education-info">Expected Graduation: May 2027</p>
                 </div>
             </div>
             
             <div className="home-contact">
                 <h2>Get In Touch</h2>
-                <p>Looking for a collaborative and dedicated team member for your Summer 2025 internship? Let's connect!</p>
-                <p>Email: ez276182@dal.ca | Phone: (902)-333-3513</p>
+                <p>I'm currently seeking a Summer 2025 internship as part of the Dalhousie Co-op Program, and I'm open to exploring new opportunities.
+                </p>
+                <p>The best way to reach me is via email. I'm usually quick to respond and will get back to you within 1-2 business days at most.</p>
+                <p>
+                    Email: <a href="mailto:ez276182@dal.ca">ez276182@dal.ca</a>
+                </p>
             </div>
         </div>
     );
