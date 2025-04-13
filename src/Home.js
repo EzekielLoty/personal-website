@@ -3,8 +3,6 @@ import {
     Intellij, FileTypeVscode, Linux, MysqlWordmark, Git, Spring, FileTypeFirebase, Aws, AzureWordmark, MicrosoftIcon,
     JupyterWordmark
 } from "./assets/Icons";
-
-import { Link } from "react-router";
 import { useState, useEffect } from 'react';
 
 function Home() {
