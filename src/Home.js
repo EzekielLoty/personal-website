@@ -48,7 +48,7 @@ function Home() {
                 <div className="project-card">
                     <h3>Tree Software</h3>
                     <p>Junior Developer</p>
-                    <p className="project-date">January 2025 - Present</p>
+                    <p className="project-date">January 2025 - April 2025</p>
                     <p>
                         Building a web platform for a tree and lumber company client that enables customer interaction, 
                         document sharing, and product purchases using React.js, Node.js, Express, and Firebase.
@@ -63,7 +63,7 @@ function Home() {
                 
                 <div className="project-card">
                     <h3>Premier League Analytics API</h3>
-                    <p className="project-date">December 2024 - Present</p>
+                    <p className="project-date">December 2024 - April 2025</p>
                     <p>
                         Developed a REST API backend service that provides access to Tottenham Hotspur soccer analytics 
                         data stored in MySQL, built with Spring Boot and Java.
