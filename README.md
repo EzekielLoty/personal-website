@@ -1,5 +1,5 @@
 # Ezekiel Loty - Personal Website 
-https://ezekielloty.netlify.app/
+ezekielloty.netlify.app
 
 ## Overview
 
