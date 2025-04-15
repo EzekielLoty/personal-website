@@ -1,4 +1,5 @@
-# Ezekiel Loty - Personal Website https://ezekielloty.netlify.app/
+# Ezekiel Loty - Personal Website 
+https://ezekielloty.netlify.app/
 
 ## Overview
 
