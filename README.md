@@ -1,6 +1,6 @@
 # Ezekiel Loty - Personal Website 
-ezekielloty.netlify.app
-
+[ezekielloty.netlify.app
+](https://ezekielloty.netlify.app/)
 ## Overview
 
 This is the source code for my personal website showcasing my experience, projects, and skills as a Computer Science student at Dalhousie University. The website serves as a portfolio to highlight my work in software engineering and data science along with any career developments.
