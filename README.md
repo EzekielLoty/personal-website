@@ -17,7 +17,7 @@ This is the source code for my personal website showcasing my experience, projec
 
 - **Frontend**: React.js, HTML5, CSS3, JavaScript
 - **Styling**: Custom CSS with animations
-- **Icons**: React Icons (reactsvgicons.com)
+- **Icons**: React Icons ([reactsvgicons.com](https://reactsvgicons.com/))
 - **Deployment**: Netlify
 
 ## Project Structure
