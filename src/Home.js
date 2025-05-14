@@ -1,9 +1,12 @@
 import { 
     JavaWordmark, Javascript, Html5, Css3, Python, NodejsWordmark, React, C, Azuresqldatabase,
-    Intellij, FileTypeVscode, Linux, MysqlWordmark, Git, Spring, FileTypeFirebase, Aws, AzureWordmark, MicrosoftIcon,
-    JupyterWordmark
+    Intellij, FileTypeVscode, Linux, MysqlWordmark, Git, Spring, FileTypeFirebase, Aws, 
+    AzureWordmark, MicrosoftIcon, JupyterWordmark, PandasWordmark, Scikitlearn, Numpy, 
+    SeabornIcon, ExpressWordmark, MatplotlibWordmark, PlotlyWordmark
 } from "./assets/Icons";
 import { useState, useEffect } from 'react';
+import { FaGithub,  FaExternalLinkAlt} from "react-icons/fa";
+
 
 function Home() {
     const [text, setText] = useState('');
@@ -51,6 +54,11 @@ function Home() {
                         Building a web platform for a tree and lumber company client that enables customer interaction, 
                         document sharing, and product purchases using React.js, Node.js, Express, and Firebase.
                     </p>
+                    <div className="project-links">
+                        <a href="https://thecompasstimbersupply.com/" target="_blank" rel="noopener noreferrer" className="project-link">
+                            <FaExternalLinkAlt /> Website
+                        </a>
+                    </div>
                     <div className="project-tech">
                         <Javascript />
                         <React />
@@ -66,6 +74,11 @@ function Home() {
                         Developed a REST API backend service that provides access to Tottenham Hotspur soccer analytics 
                         data stored in MySQL, built with Spring Boot and Java.
                     </p>
+                    <div className="project-links">
+                        <a href="https://github.com/EzekielLoty/tree-software" target="_blank" rel="noopener noreferrer" className="project-link">
+                            <FaGithub /> View Code
+                        </a>
+                    </div>
                     <div className="project-tech">
                         <JavaWordmark />
                         <Spring />
@@ -74,17 +87,48 @@ function Home() {
                 </div>
                 
                 <div className="project-card">
-                    <h3>Soccer Data Scraper</h3>
+                    <h3>Website Data Scraper</h3>
                     <p className="project-date">December 2024 - January 2025</p>
                     <p>
                         Created a Python-based web scraper to extract Premier League soccer data from FBref using 
                         Pandas, NumPy, and BeautifulSoup, processing the data for use in my analytics API.
                     </p>
+                    <div className="project-links">
+                        <a href="https://github.com/EzekielLoty/tree-software" target="_blank" rel="noopener noreferrer" className="project-link">
+                            <FaGithub /> View Code
+                        </a>
+                    </div>
+                    <div className="project-tech">
+                        <Python />
+                        <PandasWordmark />
+                        <Numpy />
+                    </div>
+                </div>
+                                
+                <div className="project-card">
+                    <h3>Python Data Analysis</h3>
+                    <p className="project-date">December 2024 - January 2025</p>
+                    <p>
+                        Analysed data from the Premier League Tottenham Hotspur (24/25) and their players based on key attacking metrics 
+                        using Pandas and Scikitlearn. Visualized player statistics using Matplotlib and Plotly.
+                    </p>
+                    <div className="project-links">
+                        <a href="https://github.com/EzekielLoty/tree-software" target="_blank" rel="noopener noreferrer" className="project-link">
+                            <FaGithub /> View Code
+                        </a>
+                    </div>
                     <div className="project-tech">
                         <Python />
                         <JupyterWordmark />
+                        <PandasWordmark />
+                        <Numpy />
+                        <MatplotlibWordmark />
+                        <SeabornIcon />
+                        <Scikitlearn />
+                        <PlotlyWordmark />
                     </div>
                 </div>
+                
             </div>
             
             <div className="home-skills">
@@ -107,7 +151,14 @@ function Home() {
                     <div className="skills-frameworks">
                         <React />
                         <NodejsWordmark />
+                        <ExpressWordmark />
                         <Spring />
+                        <PandasWordmark/>
+                        <Numpy/>
+                        <MatplotlibWordmark/>
+                        <SeabornIcon/>
+                        <Scikitlearn/>
+                        <PlotlyWordmark />
                     </div>
                 </div>
                 

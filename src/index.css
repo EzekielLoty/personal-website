@@ -329,6 +329,7 @@ Icons
 /* About section */
 .home-about p {
   margin-bottom: 1.2rem;
+  font-size: 1rem;
 }
 
 /* Project cards */
@@ -353,11 +354,59 @@ Icons
   font-style: italic;
 }
 
+
+/* Project links styling */
+.project-links {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #f0f4f8;
+  color: #0066cc;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  border: 1px solid #e0e7ef;
+}
+
+.project-link:hover {
+  background-color: #e0e7ef;
+  transform: translateY(-2px);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+}
+
+.project-link svg {
+  font-size: 1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .project-links {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .project-link {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
 .project-tech {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
   margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #eee;
 }
 
 .project-tech svg {
